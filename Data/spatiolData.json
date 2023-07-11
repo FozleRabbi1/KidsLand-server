@@ -1,0 +1,546 @@
+[
+    {
+        "title": "Cute Polka Dot Dress",
+        "images": [
+            "https://newproductjunction.com/wp-content/uploads/2023/03/baby-boys-clothing-set-boys-SDL985867076-1-df6af.jpg",         
+            "https://i.pinimg.com/originals/e1/3f/c3/e13fc3b3f081e94b0e615815d1f8913e.jpg",         
+            "https://5.imimg.com/data5/NE/ZC/BI/SELLER-33048404/kids-boy-party-wear-dress-1000x1000.jpg"         
+        ],
+        "gender" : "boy",
+        "description": "Adorable polka dot dress for your little one. Perfect for parties and special occasions.",
+        "size": "S",
+        "price": 75,
+        "quantity": 5,
+        "upload_date": "2023-07-10",
+        "brand": "ABC Kids",
+        "color": "Red",
+        "material": "Cotton"
+      },
+      {
+        "title": "Colorful Striped T-Shirt",
+        "images": [
+          "https://m.media-amazon.com/images/I/81VYtXvduNL._AC_UY1100_.jpg",
+          "https://m.media-amazon.com/images/I/41aMCJmwpcL._AC_UY1100_.jpg",
+          "https://i.pinimg.com/originals/2a/8d/c2/2a8dc264a056c1b80c649ff56bf24e2b.jpg"
+        ],
+        "gender" : "boy",
+        "description": "Vibrant striped t-shirt that adds a pop of color to any outfit. Made from soft, breathable fabric.",
+        "size": "M",
+        "price": 50,
+        "quantity": 8,
+        "upload_date": "2023-07-09",
+        "brand": "XYZ Fashion",
+        "color": "Blue",
+        "material": "Polyester"
+      },
+      {
+        "title": "Denim Shorts",
+        "images": [
+          "https://i.pinimg.com/474x/cc/39/7b/cc397ba0819d2aa889e42f906df04213.jpg",
+          "https://ae01.alicdn.com/kf/HTB1hbg2aJzvK1RkSnfoq6zMwVXa9.jpg",
+          "https://www.dhresource.com/webp/m/0x0/f2/albu/g7/M00/CD/C9/rBVaSVsNW-aAB3DwAANRvGPrvug730.jpg"
+        ],
+        "gender" : "girl",
+        "description": "Classic denim shorts with a comfortable fit. Great for everyday wear during the summer.",
+        "size": "L",
+        "price": 65,
+        "quantity": 10,
+        "upload_date": "2023-07-08",
+        "brand": "Fashion Kids",
+        "color": "Blue",
+        "material": "Denim"
+      },
+      {
+        "title": "Fairy Princess Costume",
+        "images": [
+          "https://eg.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/26/222291/1.jpg?0489",
+          "https://sc04.alicdn.com/kf/H2d85f1c6bbd24e9f96113a04ffdb7004Z.jpg",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSMD3_GmrRdRPQCkvP5NvaDiENP6LWnkLfDwHmdkBTgJTABmzYxNTUodRbQsn3Y0tqSWk&usqp=CAU"
+        ],
+        "gender" : "boy",
+        "description": "Sparkling fairy princess costume complete with wings and a tiara. Perfect for dress-up play.",
+        "size": "XS",
+        "price": 90,
+        "quantity": 3,
+        "upload_date": "2023-07-07",
+        "brand": "Enchanting Kids",
+        "color": "Pink",
+        "material": "Polyester"
+      },
+      {
+        "title": "Rainbow Leggings",
+        "images": [
+            "https://cdn.fcglcdn.com/brainbees/images/products/300x364/13240188a.webp",
+            "https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/productimage/2021/3/17/802a4c21-3d92-40d0-8b91-d02068c096251615982552087-1.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSybHkJE6BHetAG_rRdE05qc9yepBOCxYU2y6bIpXSZ7_gcP-dzebb3gN0EYLnLRs6H5Lw&usqp=CAU"
+        ],
+        "gender" : "girl",
+        "description": "Colorful rainbow leggings that add a fun touch to any outfit. Made from stretchy, comfortable fabric.",
+        "size": "S",
+        "price": 55,
+        "quantity": 6,
+        "upload_date": "2023-07-06",
+        "brand": "Rainbow Kids",
+        "color": "Multicolor",
+        "material": "Spandex"
+      },
+      {
+        "title": "Striped Sun Hat",
+        "images": [
+            "https://dimg.dillards.com/is/image/DillardsZoom/nav2/bonnie-jean-baby-girls-newborn-24-months-short-sleeve-checked-seersucker-fit-and-flare-dress/00000000_zi_6d04fa8c-b5ad-4e46-9fe6-125d644e08a2.jpg",
+            "https://i.etsystatic.com/7424583/r/il/88cc40/4143892471/il_fullxfull.4143892471_1w7y.jpg",
+            "https://cdn.shopify.com/s/files/1/0286/0639/8524/products/DRG451322008-1_1024x1024.jpg?v=1658475897"
+        ],
+        "gender" : "girl",
+        "description": "Stylish sun hat with a striped pattern. Provides excellent sun protection for outdoor activities.",
+        "size": "One Size",
+        "price": 40,
+        "quantity": 7,
+        "upload_date": "2023-07-05",
+        "brand": "Sunshine Kids",
+        "color": "White",
+        "material": "Straw"
+      },
+      {
+        "title": "Elegant Party Dress",
+        "images": [
+          "https://i.ebayimg.com/images/g/pnIAAOSw3ydV3qF3/s-l1200.webp",
+          "https://grandmasgiftshop.com/wp-content/uploads/2021/08/Newborn-Baby-Boy-Denim-Clothes-Cotton-Plaid-Rompers-Gentleman-Bib-Jeans-Clothing-Suit-Outfit-6-24M_571f59fe-d3af-4eca-b048-9011d14566f4.jpg",
+          "https://static-01.daraz.pk/p/abe2baf643fb949e40b3078ec329a11b.jpg"
+        ],
+        "gender" : "boy",
+        "description": "Elegant party dress with a floral design. Perfect for weddings and formal occasions.",
+        "size": "M",
+        "price": 120,
+        "quantity": 2,
+        "upload_date": "2023-07-04",
+        "brand": "Fancy Kids",
+        "color": "Pink",
+        "material": "Silk"
+      },
+      {
+        "title": "Cartoon Print Pajamas",
+        "images": [
+          "https://static.hopscotch.in/fstatic/product/202306/9b9e3319-d036-43b5-87b4-97f6431e529c_large.jpg?version=1686546658011&tr=w-480,c-at_max,n-normal",
+          "https://static.hopscotch.in/fstatic/product/202201/43893707-c96a-439c-9fd0-32da15d80a60_large.jpg?version=1641221846298&tr=w-480",
+          "https://lzd-img-global.slatic.net/g/p/c99ce801b65e14511b3d8968fbb60d76.jpg_360x360q75.jpg_.webp"
+        ],
+        "gender" : "girl",
+        "description": "Comfortable pajamas featuring cute cartoon characters. Made from soft, breathable fabric.",
+        "size": "L",
+        "price": 70,
+        "quantity": 9,
+        "upload_date": "2023-07-03",
+        "brand": "Dreamy Kids",
+        "color": "Multicolor",
+        "material": "Cotton"
+      },
+      {
+        "title": "Dinosaur Print T-Shirt",
+        "images": [
+          "https://static.hopscotch.in/fstatic/product/202305/8a9e3455-5c7b-420e-bd8c-bb153b781103_large.jpg?version=1684407476719&tr=w-480,c-at_max,n-normal",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTANAZq67q25Ki56hWgV4TzaH26bnD5HaRrRnhaNiUQqm-g5pvwnEt5jGxMI88BQ4U9LaI&usqp=CAU",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlxYX3F8VO0bJje9TUutNdL0jISEbG_k8XogC8UZKCV7hcAUC5b9luPjGFdWNeEshyEPo&usqp=CAU"
+        ],
+        "gender" : "boy",
+        "description": "Cool t-shirt featuring a dinosaur print. Perfect for little ones who love dinosaurs.",
+        "size": "S",
+        "price": 50,
+        "quantity": 7,
+        "upload_date": "2023-07-01",
+        "brand": "Dino Kids",
+        "color": "Green",
+        "material": "Cotton"
+      },
+      {
+        "title": "Floral Romper",
+        "images": [
+          "https://my-test-11.slatic.net/p/ba35147c1a7d7dc43ce9da00c899683c.jpg",
+          "https://ae01.alicdn.com/kf/H58b062e21bd24dc7866b182bc0511c97z/Girls-Dress-Denim-Stitching-Dress-Spring-Full-Sleeve-Lace-Princess-Party-Dress-Kids-Birthday-Present-2.jpg_640x640.jpg",
+          "https://m.media-amazon.com/images/I/511h4WPibuL._SY450_.jpg"
+        ],
+        "gender" : "girl",
+        "description": "Pretty floral romper with a comfortable fit. Great for playdates and casual outings.",
+        "size": "M",
+        "price": 70,
+        "quantity": 3,
+        "upload_date": "2023-06-30",
+        "brand": "Blossom Kids",
+        "color": "Yellow",
+        "material": "Rayon"
+      },
+      {
+        "title": "Sports Sneakers",
+        "images": [
+          "https://static-01.daraz.com.bd/p/67433ef389cb7351ce7726188bea1f6d.jpg",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL1tjLu_39cRe_fzGGqQOAVy833H4I6DxCe8rYxenmbHA5ZIPf1SWZTPRtFVlmI_1mMO8&usqp=CAU",
+          "https://ae01.alicdn.com/kf/HTB1C0IOpA9WBuNjSspeq6yz5VXaF/baby-boy-clothes-newborn-plaid-jumpsuit-jeans-casual-baby-clothes-newborn-clothes.jpg"
+        ],
+        "gender" : "boy",
+        "description": "Stylish sports sneakers for active kids. Provides excellent support and comfort during physical activities.",
+        "size": "L",
+        "price": 85,
+        "quantity": 9,
+        "upload_date": "2023-06-29",
+        "brand": "Active Kids",
+        "color": "Black",
+        "material": "Synthetic"
+      },
+      {
+        "title": "Unicorn Print Backpack",
+        "images": [
+          "https://sc04.alicdn.com/kf/H38ed67ce6e294917b16f713c062937e1G.jpg",
+          "https://www.pinkblueindia.com/blog/wp-content/uploads/2016/02/kids-Formal-3-Piece-Suit.jpg",
+          "https://i.pinimg.com/736x/db/61/b5/db61b52f6f3cb47709b2f5d6e21f2987.jpg"
+        ],
+        "gender" : "boy",
+        "description": "Adorable unicorn print backpack for school or daycare. Comes with multiple compartments for easy organization.",
+        "size": "One Size",
+        "price": 50,
+        "quantity": 6,
+        "upload_date": "2023-06-28",
+        "brand": "Magical Kids",
+        "color": "Purple",
+        "material": "Nylon"
+      },
+      {
+        "title": "Checked Shirt",
+        "images": [
+          "https://my-live-01.slatic.net/p/9b8cd721387fde522316089bd008cc9f.jpg",
+          "https://i5.walmartimages.com/asr/67254e6b-1191-47ca-bc28-e59072f0469c.9747ac41e493801669b311e4c77df7e0.jpeg?odnHeight=432&odnWidth=320&odnBg=FFFFFF",
+          "https://down-sg.img.susercontent.com/file/2b57cb74c46448f744edde4eedcc5d6f_tn"
+        ],
+        "gender" : "boy",
+        "description": "Classic checked shirt for a smart and stylish look. Made from high-quality, durable fabric.",
+        "size": "S",
+        "price": 60,
+        "quantity": 8,
+        "upload_date": "2023-06-27",
+        "brand": "Trendy Kids",
+        "color": "Red",
+        "material": "Cotton"
+      },
+      {
+        "title": "Tutu Skirt",
+        "images": [
+          "https://m.media-amazon.com/images/I/71f6XyqZsUL.jpg",
+          "https://ae01.alicdn.com/kf/HTB1SD7naFYqK1RjSZLeq6zXppXas.jpg",
+          "https://m.media-amazon.com/images/I/81bKM6cnuML._AC_UY1000_.jpg"
+        ],
+        "gender" : "girl",
+        "description": "Fluffy tutu skirt for little ballerinas. Perfect for dance classes and performances.",
+        "size": "XS",
+        "price": 55,
+        "quantity": 5,
+        "upload_date": "2023-06-26",
+        "brand": "Twinkle Toes",
+        "color": "Pink",
+        "material": "Tulle"
+      },
+      {
+        "title": "Hooded Jacket",
+        "images": [
+          "https://ae01.alicdn.com/kf/HTB1vWvyPFXXXXXfXpXXq6xXFXXX5/2017-baby-boy-clothes-Kids-Suit-Boy-Shirt-Pants-bebek-Outfits-baby-clothing-set-Children-Clothing.jpg",
+          "https://ae04.alicdn.com/kf/HTB12RcOo8yWBuNkSmFPq6xguVXaJ.jpg",
+          "https://down-sg.img.susercontent.com/file/090d114b558558d73a09178313865c29"
+        ],
+        "gender" : "boy",
+        "description": "Warm and cozy hooded jacket for chilly days. Made from soft, insulated material.",
+        "size": "M",
+        "price": 100,
+        "quantity": 2,
+        "upload_date": "2023-06-25",
+        "brand": "Cozy Kids",
+        "color": "Blue",
+        "material": "Polyester"
+      },
+      {
+        "title": "Animal Print Onesie",
+        "images": [
+          "https://5.imimg.com/data5/SELLER/Default/2020/9/CH/FN/BH/96594425/kids-denim-jeans-top-dress.jpg",
+          "https://5.imimg.com/data5/NR/CG/MY-40373251/ladies-denim-one-piece-dress-500x500.jpg",
+          "https://di2ponv0v5otw.cloudfront.net/posts/2019/07/11/5d27a6ecb3e9171732df7f59/m_5d27a75bbb22e3e931d6e5d3.jpg"
+        ],
+        "gender" : "girl",
+        "description": "Cute animal print onesie for a cozy night's sleep. Made from plush, comfortable fabric.",
+        "size": "L",
+        "price": 75,
+        "quantity": 4,
+        "upload_date": "2023-06-24",
+        "brand": "Dreamland Kids",
+        "color": "Multicolor",
+        "material": "Fleece"
+      },
+      {
+        "title": "Striped Dress Shirt",
+        "images": [
+          "https://m.media-amazon.com/images/I/61-njkK7SNL._AC_UL1500_.jpg",
+          "https://m.media-amazon.com/images/I/51UBSkftryL._AC_SX425_.jpg",
+          "https://m.media-amazon.com/images/I/51gju5mATSL._AC_UY1100_.jpg"
+        ],
+        "gender" : "boy",
+        "description": "Stylish striped dress shirt for formal occasions. Made from wrinkle-resistant fabric.",
+        "size": "S",
+        "price": 80,
+        "quantity": 6,
+        "upload_date": "2023-06-23",
+        "brand": "Classy Kids",
+        "color": "Blue",
+        "material": "Cotton"
+      },
+      {
+        "title": "Printed Leggings",
+        "images": [
+          "https://cdn.shopify.com/s/files/1/0333/5340/0453/products/278285697_947474239301768_4730911968249880866_n.jpg?v=1649882678&width=533",
+          "https://www.bowsbabyboutique.co.uk/cdn/shop/files/IMG_5224_620x.jpg?v=1683208895",
+          "https://cdn.shopify.com/s/files/1/0414/6023/6453/products/mamas-papas-tops-shirts-short-sleeve-brown-polo-33981979918501_250x250@2x.jpg?v=1674724773"
+        ],
+        "gender" : "boy",
+        "description": "Printed leggings with a trendy design. Made from stretchy, moisture-wicking fabric.",
+        "size": "M",
+        "price": 65,
+        "quantity": 8,
+        "upload_date": "2023-06-22",
+        "brand": "Fashionable Kids",
+        "color": "Multicolor",
+        "material": "Spandex"
+      },
+      {
+        "title": "Party Dress",
+        "images": [
+          "https://cf.shopee.sg/file/7c7e93ca5a48926e1608c011322c9476",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3q-DJqa0MQZApcqbIIO0PUaoHWA9ND0814_E37QoowO2Z6YU1n7vxtj8cptYmaZgoEPI&usqp=CAU",
+          "https://images-na.ssl-images-amazon.com/images/I/612wGJUzcVL._UL1000_.jpg"
+        ],
+        "gender" : "boy",
+        "description": "Gorgeous party dress with sequin embellishments. Perfect for special occasions and celebrations.",
+        "size": "S",
+        "price": 110,
+        "quantity": 6,
+        "upload_date": "2023-06-21",
+        "brand": "Sparkle Kids",
+        "color": "Silver",
+        "material": "Polyester"
+      },
+      {
+        "title": "Printed Sweatpants",
+        "images": [
+          "https://cdn.shopify.com/s/files/1/0029/7041/9313/products/weiqinniya-Girls-Dress-Kid-Jeans-Dress-For-Girl-2018-Kids-Denim-Dresses-For-Girls-Fashion-Children_large.jpg?v=1538151743",
+          "https://i.ebayimg.com/images/g/tDsAAOSwFqZeYF49/s-l400.jpg",
+          "https://down-my.img.susercontent.com/file/464b2c76b4c3a8bf11e57870076d3f15"
+        ],
+        "gender" : "girl",
+        "description": "Comfy printed sweatpants for casual and loungewear. Made from soft, breathable fabric.",
+        "size": "M",
+        "price": 45,
+        "quantity": 9,
+        "upload_date": "2023-06-20",
+        "brand": "Relax Kids",
+        "color": "Gray",
+        "material": "Cotton"
+      },
+      {
+        "title": "Rainbow Socks",
+        "images": [
+          "https://i.pinimg.com/736x/83/00/55/830055d79a2e9e860ad6b44860961562.jpg",
+          "https://i.pinimg.com/474x/86/23/b8/8623b8823c526193323bfa74b938bab2.jpg",
+          "https://i.pinimg.com/736x/cf/80/5e/cf805e1074bfa175ca2cbb94d54d753a.jpg"
+        ],
+        "gender" : "boy",
+        "description": "Colorful rainbow socks for happy little feet. Made from soft, stretchy fabric.",
+        "size": "S",
+        "price": 20,
+        "quantity": 10,
+        "upload_date": "2023-06-19",
+        "brand": "Rainbow Kids",
+        "color": "Multicolor",
+        "material": "Cotton"
+      },
+      {
+        "title": "Printed Skater Dress",
+        "images": [
+          "https://down-ph.img.susercontent.com/file/a7dcc364382518c146a0edfdf1e0a835",
+          "https://i.pinimg.com/originals/1b/33/71/1b33715887891a7db1021767679ca3f0.jpg",
+          "https://m.media-amazon.com/images/I/51h5qJT0nuL.jpg"
+        ],
+        "gender" : "girl",
+        "description": "Stylish printed skater dress with a flared skirt. Perfect for a fun and trendy look.",
+        "size": "L",
+        "price": 65,
+        "quantity": 7,
+        "upload_date": "2023-06-18",
+        "brand": "Trendy Kids",
+        "color": "Black",
+        "material": "Polyester"
+      },
+      {
+        "title": "Cute Animal Onesie",
+        "images": [
+          "https://ae01.alicdn.com/kf/Sc4701b2d669e4cf49a4afc970ec76724X/Baby-Cotton-Summer-Suit-Children-s-Handsome-Short-Sleeved-Clothes-Fashion-Shorts-2-Piece-Set.png_640x640.png",
+          "https://static-01.daraz.pk/p/0f88f0d3c8e5ff4136c711fdc93bd95e.jpg_750x750.jpg_.webp_.webp",
+          "https://m.media-amazon.com/images/I/41U24Bf6+vS._AC_.jpg"
+        ],
+        "gender" : "boy",
+        "description": "Adorable animal print onesie for a cozy night's sleep. Made from soft and warm fleece material.",
+        "size": "S",
+        "price": 60,
+        "quantity": 5,
+        "upload_date": "2023-06-19",
+        "brand": "Snuggly Kids",
+        "color": "Multicolor",
+        "material": "Fleece"
+      },
+      {
+        "title": "Printed T-Shirt",
+        "images": [
+          "https://dimg.dillards.com/is/image/DillardsZoom/zoom/rare-editions-little-girls-2t-6x-denim-vest--tiered-chiffon-dress-set/00000000_zi_08d3bf3d-d508-41ac-a1f1-d9d694985ac5.jpg",
+          "https://m.media-amazon.com/images/I/71OaZl5-AXL._AC_UY1100_.jpg",
+          "https://m.media-amazon.com/images/I/819++c9vhPL._SY606_.jpg"
+        ],
+        "gender" : "girl",
+        "description": "Trendy printed t-shirt for a stylish and casual look. Made from soft and breathable fabric.",
+        "size": "M",
+        "price": 45,
+        "quantity": 10,
+        "upload_date": "2023-06-18",
+        "brand": "Trendy Kids",
+        "color": "White",
+        "material": "Cotton"
+      },
+      {
+        "title": "Denim Overalls",
+        "images": [
+          "https://kidsfashionaccessories.files.wordpress.com/2017/05/boy-prince-costume-online.jpg?w=640",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShB-EnIgWgfemHW2gplyThyUDJRlE_D2fvitD0MOcCWqks0PiyBAtQJMyvZxvObeA1rlg&usqp=CAU",
+          "https://www.pinkblueindia.com/media/catalog/product/cache/2df8770d5eeb0953b5965ef2dc444e9d/b/o/boy-custom-made-royal-blue-white-birthday-suit.jpg"
+        ],
+        "gender" : "boy",
+        "description": "Classic denim overalls for a cool and casual look. Made from durable and comfortable denim fabric.",
+        "size": "L",
+        "price": 75,
+        "quantity": 7,
+        "upload_date": "2023-06-17",
+        "brand": "Denim Kids",
+        "color": "Blue",
+        "material": "Denim"
+      },
+      {
+        "title": "Printed Skirt",
+        "images": [
+          "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/TsUAAOSwrpRhLPmT/$_12.JPG?set_id=880000500F",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-qO6-atRwgf9-kMwCoCxyqFEY0qpoedPXTb_sIxFlQ8QzhqVb9cl1AP_-R1Qo-vAxgx8&usqp=CAU",
+          "https://m.media-amazon.com/images/I/81bKM6cnuML._AC_UY1100_.jpg"
+        ],
+        "gender" : "girl",
+        "description": "Stylish printed skirt for a fashionable and trendy look. Made from lightweight and flowy material.",
+        "size": "XS",
+        "price": 55,
+        "quantity": 8,
+        "upload_date": "2023-06-16",
+        "brand": "Fashionista Kids",
+        "color": "Multicolor",
+        "material": "Polyester"
+      },
+      {
+        "title": "Striped Polo Shirt",
+        "images": [
+          "https://img.fruugo.com/product/9/29/474253299_max.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/51OGj4e5eSL._SLDPMOBCAROUSELAUTOCROP288221_MCnd_AC_SR462,693_.jpg",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxOvAw9DnwJJ76poEJ74qkCd01gD3SUVzcDfmpfCi_tr_2PYu17VimhCuj5CqjQbD5MbE&usqp=CAU"
+        ],
+        "gender" : "boy",
+        "description": "Classic striped polo shirt for a smart and preppy look. Made from high-quality and comfortable fabric.",
+        "size": "S",
+        "price": 55,
+        "quantity": 6,
+        "upload_date": "2023-06-15",
+        "brand": "Preppy Kids",
+        "color": "Blue",
+        "material": "Cotton"
+      },
+      {
+        "title": "Floral Sundress",
+        "images": [
+          "https://img2.exportersindia.com/product_images/bc-full/2022/2/8901495/korean-style-baby-boy-dress-1644579665-6198286.jpeg",
+          "https://static-01.daraz.com.bd/p/4e208de6b7b02350e39b93c5ba0eaa2d.jpg_340x340q80.jpg_.webp",
+          "https://gh.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/81/082755/1.jpg?6169"
+        ],
+        "gender" : "boy",
+        "description": "Pretty floral sundress for a fresh and summery look. Made from lightweight and breathable material.",
+        "size": "M",
+        "price": 65,
+        "quantity": 4,
+        "upload_date": "2023-06-14",
+        "brand": "Sunshine Kids",
+        "color": "Yellow",
+        "material": "Cotton"
+      },
+      {
+        "title": "Printed Shorts",
+        "images": [
+          "https://i.pinimg.com/564x/2a/eb/b3/2aebb3db545aa9614cc224286cf64b1d.jpg",
+          "https://sg-live-01.slatic.net/p/3d075223380c5d3f81ddf85dec669c87.jpg",
+          "https://ae04.alicdn.com/kf/S2116e7cd372543b5bfec706bea19b25fU.jpg"
+        ],
+        "gender" : "boy",
+        "description": "Trendy printed shorts for a comfortable and stylish look. Made from lightweight and breathable fabric.",
+        "size": "L",
+        "price": 40,
+        "quantity": 9,
+        "upload_date": "2023-06-13",
+        "brand": "Cool Kids",
+        "color": "Multicolor",
+        "material": "Polyester"
+      },
+      {
+        "title": "Printed Raincoat",
+        "images": [
+          "https://images.meesho.com/images/products/53242195/mqvg3_512.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/61L4awZS3BL._AC_UX385_.jpg",
+          "https://i5.walmartimages.com/asr/54bc7328-99c3-40ed-b662-97a8b02bd59e.b424b0cd178ef516cc71d24101209c96.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+        ],
+        "gender" : "girl",
+        "description": "Colorful printed raincoat for rainy days. Made from waterproof and lightweight material.",
+        "size": "S",
+        "price": 55,
+        "quantity": 7,
+        "upload_date": "2023-06-12",
+        "brand": "Rainy Days",
+        "color": "Multicolor",
+        "material": "Polyester"
+      },
+      {
+        "title": "Printed Backpack",
+        "images": [
+          "https://image.made-in-china.com/202f0j00CAylrtbGAWok/Children-Clothing-Boy-Baby-Knitted-T-Shirt-and-Denim-Pant-Suit-Wear-Made-of-Print-Top.jpg",
+          "https://m.media-amazon.com/images/I/6160hF3E1XL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/61HYJAHF28L._AC_UY1100_.jpg"
+        ],
+        "gender" : "boy",
+        "description": "Stylish printed backpack for school or day trips. Comes with multiple compartments for easy organization.",
+        "size": "One Size",
+        "price": 50,
+        "quantity": 10,
+        "upload_date": "2023-06-11",
+        "brand": "Adventure Kids",
+        "color": "Blue",
+        "material": "Nylon"
+      },
+      {
+        "title": "Floral Headband",
+        "images": [
+          "https://stylish-toddler-zone.myshopify.com/cdn/shop/products/New-Kids-Fashion-Boys-Clothes-Brands-Cotton-Glass-Print-Children-Suits-Toddler-Boy-Clothing-Tie-Tops_c564915a-cf51-4d08-bff6-7e2aafe5024e.jpg?v=1510227015",
+          "https://ae01.alicdn.com/kf/HTB1WSwMPVXXXXbQXVXXq6xXFXXXx/2017-Baby-Boys-Clothes-Sets-Gentleman-With-Tie-Long-Sleeved-T-shirts-Tops-Plaid-Pants-Outfits.jpg_640x640.jpg",
+          "https://ae01.alicdn.com/kf/Had76bb57f5e24608b0c7e4f7d269d2feP/Baby-boy-clothes-cotton-spring-and-autumn-suit-boy-gentleman-printing-shirt-bow-tie-suit-letter.jpg_640x640.jpg"
+        ],
+        "gender" : "boy",
+        "description": "Pretty floral headband for a cute and girly look. Adds a touch of charm to any hairstyle.",
+        "size": "One Size",
+        "price": 35,
+        "quantity": 8,
+        "upload_date": "2023-06-10",
+        "brand": "Girly Accessories",
+        "color": "Pink",
+        "material": "Fabric"
+      }
+]
