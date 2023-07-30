@@ -34,12 +34,12 @@ async function run() {
     const kidsSpecialCollection = client.db("kedsCollection").collection("spacialCollection");
     const FavouriteCollection = client.db("kedsCollection").collection("FavouriteCollection");
     const usersDataCollection = client.db("kedsCollection").collection("userCollection");
+    const allDressCollection = client.db("kedsCollection").collection("allDressCollection");
 
 
-    //==============================================>>>>>> users data collection Api from register
+    //===================[connect by register]==================>>>>>> users data collection Api from register
     app.post("/users", async (req, res) => {
       const usersData = req.body;
-      console.log(usersData);
       const query = { email: usersData.email };
       const existingUser = await usersDataCollection.findOne(query);
       if (existingUser) {
@@ -52,7 +52,7 @@ async function run() {
     })
 
 
-    //==================================================>>>>>>>>>> this dynamic API for spacial collention section
+    //===================[Connect by SpatioanCatagories section ]===================>>>>>>>>>> this dynamic API for spacial collention section
     app.get("/specialDats/:gender", async (req, res) => {
       const gender = req.params.gender;
       if (gender === "all") {
@@ -65,10 +65,9 @@ async function run() {
         const result = await kidsSpecialCollection.find(query).toArray();
         res.send(result)
       }
-
     })
 
-    // ===================================================>>>>>>>>>>>>>>>>>>>> this API ADD favourite data coluction
+    // ===============[Connect by SpatioanCatagories section]==============>>>>> this API ADD favourite data coluction
     app.post("/favouriteProducts", async (req, res) => {
       const favouriteData = req.body;
       const result = await FavouriteCollection.insertOne(favouriteData)
@@ -76,31 +75,15 @@ async function run() {
     });
 
 
-    // ======================================================>>>>>>>>>>>>>>>>>>>> this API GET favourite data coluction
+    // =================[connect bt nav bar]=============>>>>>>>>>>>>>>>>>>>> this API GET favourite data coluction
     app.get("/favouriteProducts", async (req, res) => {
       const email = req?.query?.email;
-      const query = {email : email};
+      const query = { email: email };
       const result = await FavouriteCollection.find(query).toArray();
       res.send(result)
     })
 
-    // ============================>>>>>>>>>>>>>>just for practice,,,,,,,,,,,,,,,,,,,,  ======= এক cullection থেকে Id এনে অন্য cullection এ filter করে , তার সাথে  index number add করে তার পর data পাঠান হয়েছে,,,
-    // app.get("/favouriteProducts", async (req, res) => {
-    //   const FavouriteCollectionData = await FavouriteCollection.find().toArray();
-    //   const query = { _id: { $in: FavouriteCollectionData.map(id => new ObjectId(id.productId)) } };
-    //   const indexNumber = FavouriteCollectionData.map(imgIndex => imgIndex.imageIndexNumber)
-
-    //   const kidsSpecialCollectionData = await kidsSpecialCollection.find(query).toArray();
-    //   const updatedKidsSpecialCollectionData = kidsSpecialCollectionData.map((doc, index) => ({
-    //     ...doc,
-    //     indexNumber: indexNumber[index]
-    //   }));
-    //   res.send(updatedKidsSpecialCollectionData)
-    // })
-
-
-
-    //=================================================>>>>>>>>>> This Api cunnect to NAV and delete favourite itemes 
+    //==================[connect bt nav bar delete button]=================>>>>>>>>>> This Api cunnect to NAV and delete favourite itemes 
     app.delete("/favouriteProducts/:id", async (req, res) => {
       const id = req.params.id;
       const query = { _id: new ObjectId(id) }
@@ -109,8 +92,19 @@ async function run() {
     })
 
 
+    // ===================>>>>>>>>> [all producet number api ,, connect with ( AllDressCollection.jsx ) ]
+    app.get("/allProductNumber", async (req, res) => {
+      const totalItems = await allDressCollection.estimatedDocumentCount()
+      res.send(totalItems.toString())
+    })
 
-
+    // ===================>>>>>>>>> [dynamic producet collection api ,, connect with ( useAllDressCollection.jsx Hook ) ]
+    app.get("/allDressCollection", async (req, res) => {
+      const itemOffset = parseInt(req.query.itemOffset) || 0;
+      const endOffset = parseInt(req.query.endOffset) || 12;
+        const result = await allDressCollection.find().skip(itemOffset).limit(endOffset - itemOffset).toArray();
+        res.send(result);
+    });
 
 
 
@@ -123,12 +117,6 @@ async function run() {
 run().catch(console.dir);
 
 
-
-
-
-// app.get("/specialDats", async (req, res) => {
-//   res.send(datas)
-// })
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
