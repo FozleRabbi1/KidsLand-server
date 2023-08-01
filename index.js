@@ -98,28 +98,104 @@ async function run() {
       res.send(totalItems.toString())
     })
 
-    // ===================>>>>>>>>> [dynamic producet collection api ,, connect with ( useAllDressCollection.jsx Hook ) ]
+
+
     app.get("/allDressCollection", async (req, res) => {
       const itemOffset = parseInt(req.query.itemOffset) || 0;
       const endOffset = parseInt(req.query.endOffset) || 12;
       const gender = req.query.selectedOption;
+      const ascenDescen = req.query.ascenDescen;
+      const lowRangeValue = parseFloat(req.query.lowRangeValue);
+      const highRangeValue = parseFloat(req.query.highRangeValue);
+      // console.log(135, ascenDescen)
+      // console.log(135, highRangeValue)
+      const ascenDescenOrder = ascenDescen === "ascending" ? 1 : -1;
       
       if (gender === "All") {
-        const productLength = (await allDressCollection.find().toArray()).length;
-        const result = await allDressCollection.find().sort({ price: 1 }).skip(itemOffset).limit(endOffset - itemOffset).toArray();
-        const finalResult = { productLength, result }
+        const query = { price: { $gte: lowRangeValue, $lte: highRangeValue } };
+        const productLength = await allDressCollection.countDocuments(query);
+        const result = await allDressCollection.find(query).sort({ price: ascenDescenOrder }).skip(itemOffset).limit(endOffset - itemOffset).toArray();
+        const finalResult = { productLength, result };
         res.send(finalResult);
         return
-      }
-      else {
-        const query = { gender: gender.toLocaleLowerCase() }
-        const productLength = (await allDressCollection.find(query).toArray()).length;
-        const result = await allDressCollection.find(query).sort({ price: 1 }).skip(itemOffset).limit(endOffset - itemOffset).toArray();
-        const finalResult = { productLength, result }
+      } else {
+        const query = { gender: gender.toLowerCase(), price: { $gte: lowRangeValue, $lte: highRangeValue } };
+        const productLength = await allDressCollection.countDocuments(query);
+        const result = await allDressCollection.find(query).sort({ price: ascenDescenOrder }).skip(itemOffset).limit(endOffset - itemOffset).toArray();
+        const finalResult = { productLength, result };
         res.send(finalResult);
       }
-
     });
+
+    // ===================>>>>>>>>> [dynamic producet collection api ,, connect with ( useAllDressCollection.jsx Hook ) ]
+    // app.get("/allDressCollection", async (req, res) => {
+    //   const itemOffset = parseInt(req.query.itemOffset) || 0;
+    //   const endOffset = parseInt(req.query.endOffset) || 12;
+    //   const gender = req.query.selectedOption;
+    //   const lowRangeValue = req.query.lowRangeValue;
+    //   const HighRangeValue = req.query.HighRangeValue;
+    //   console.log( lowRangeValue)
+    //   console.log( HighRangeValue)
+
+    //   if (gender === "All") {
+    //     const productLength = (await allDressCollection.find().toArray()).length;
+    //     const result = await allDressCollection.find().sort({ price: 1 }).skip(itemOffset).limit(endOffset - itemOffset).toArray();
+    //     const finalResult = { productLength, result }
+    //     res.send(finalResult);
+    //     return
+    //   }
+    //   else {
+    //     const query = { gender: gender.toLocaleLowerCase() }
+    //     const productLength = (await allDressCollection.find(query).toArray()).length;
+    //     const result = await allDressCollection.find(query).sort({ price: 1 }).skip(itemOffset).limit(endOffset - itemOffset).toArray();
+    //     const finalResult = { productLength, result }
+    //     res.send(finalResult);
+    //   }
+
+    // });
+
+    // app.get("/allDressCollection", async (req, res) => {
+    //   const itemOffset = parseInt(req.query.itemOffset) || 0;
+    //   const endOffset = parseInt(req.query.endOffset) || 12;
+    //   const gender = req.query.selectedOption;
+    //   const ascenDescen = req.query.ascenDescen;
+    //   const lowRangeValue = parseFloat(req.query.lowRangeValue);
+    //   const highRangeValue = parseFloat(req.query.highRangeValue);
+    //   // console.log(135, ascenDescen)
+    //   // console.log(135, highRangeValue)
+
+    //   if (gender === "All") {
+    //     const query = { price: { $gte: lowRangeValue, $lte: highRangeValue } };
+    //     const productLength = await allDressCollection.countDocuments(query);
+    //     if (ascenDescen === "ascending") {
+    //       const result = await allDressCollection.find(query).sort({ price: -1 }).skip(itemOffset).limit(endOffset - itemOffset).toArray();
+    //       const finalResult = { productLength, result };
+    //       res.send(finalResult);
+    //       return
+    //     }
+    //     else {
+    //       const result = await allDressCollection.find(query).sort({ price: 1 }).skip(itemOffset).limit(endOffset - itemOffset).toArray();
+    //       const finalResult = { productLength, result };
+    //       res.send(finalResult);
+    //       return
+    //     }
+    //   } else {
+    //     const query = { gender: gender.toLowerCase(), price: { $gte: lowRangeValue, $lte: highRangeValue } };
+    //     const productLength = await allDressCollection.countDocuments(query);
+    //     if (ascenDescen === "ascending") {
+    //       const result = await allDressCollection.find(query).sort({ price: 1 }).skip(itemOffset).limit(endOffset - itemOffset).toArray();
+    //       const finalResult = { productLength, result };
+    //       res.send(finalResult);
+    //     }
+    //     else {
+    //       const result = await allDressCollection.find(query).sort({ price: -1 }).skip(itemOffset).limit(endOffset - itemOffset).toArray();
+    //       const finalResult = { productLength, result };
+    //       res.send(finalResult);
+    //     }
+
+    //   }
+    // });
+
 
 
 
