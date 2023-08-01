@@ -61,7 +61,7 @@ async function run() {
         return
       }
       else {
-        const query = { gender: gender }
+        const query = { gender: gender.toLocaleLowerCase() }
         const result = await kidsSpecialCollection.find(query).toArray();
         res.send(result)
       }
@@ -102,9 +102,25 @@ async function run() {
     app.get("/allDressCollection", async (req, res) => {
       const itemOffset = parseInt(req.query.itemOffset) || 0;
       const endOffset = parseInt(req.query.endOffset) || 12;
-        const result = await allDressCollection.find().skip(itemOffset).limit(endOffset - itemOffset).toArray();
-        res.send(result);
+      const gender = req.query.selectedOption;
+      
+      if (gender === "All") {
+        const productLength = (await allDressCollection.find().toArray()).length;
+        const result = await allDressCollection.find().sort({ price: 1 }).skip(itemOffset).limit(endOffset - itemOffset).toArray();
+        const finalResult = { productLength, result }
+        res.send(finalResult);
+        return
+      }
+      else {
+        const query = { gender: gender.toLocaleLowerCase() }
+        const productLength = (await allDressCollection.find(query).toArray()).length;
+        const result = await allDressCollection.find(query).sort({ price: 1 }).skip(itemOffset).limit(endOffset - itemOffset).toArray();
+        const finalResult = { productLength, result }
+        res.send(finalResult);
+      }
+
     });
+
 
 
 
