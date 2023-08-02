@@ -100,6 +100,28 @@ async function run() {
 
 
 
+    //================>>> short api creat by GPT
+    // app.get("/allDressCollection", async (req, res) => {
+    //   const itemOffset = parseInt(req.query.itemOffset) || 0;
+    //   const endOffset = parseInt(req.query.endOffset) || 12;
+    //   const gender = req.query.selectedOption;
+    //   const ascenDescen = req.query.ascenDescen;
+    //   const lowRangeValue = parseFloat(req.query.lowRangeValue);
+    //   const highRangeValue = parseFloat(req.query.highRangeValue);
+
+    //   const query = {
+    //     ...(gender !== "All" && { gender: gender.toLowerCase() }),
+    //     price: { $gte: lowRangeValue, $lte: highRangeValue }
+    //   };
+
+    //   const productLength = await allDressCollection.countDocuments(query);
+    //   const ascenDescenOrder = ascenDescen === "ascending" ? 1 : -1;
+    //   const result = await allDressCollection.find(query).sort({ price: ascenDescenOrder }).skip(itemOffset).limit(endOffset - itemOffset).toArray();
+    //   const finalResult = { productLength, result };
+
+    //   res.send(finalResult);
+    // });
+
     app.get("/allDressCollection", async (req, res) => {
       const itemOffset = parseInt(req.query.itemOffset) || 0;
       const endOffset = parseInt(req.query.endOffset) || 12;
@@ -107,10 +129,8 @@ async function run() {
       const ascenDescen = req.query.ascenDescen;
       const lowRangeValue = parseFloat(req.query.lowRangeValue);
       const highRangeValue = parseFloat(req.query.highRangeValue);
-      // console.log(135, ascenDescen)
-      // console.log(135, highRangeValue)
-      const ascenDescenOrder = ascenDescen === "ascending" ? 1 : -1;
-      
+      const ascenDescenOrder = ascenDescen.toLowerCase() === "ascending" ? 1 : -1;
+
       if (gender === "All") {
         const query = { price: { $gte: lowRangeValue, $lte: highRangeValue } };
         const productLength = await allDressCollection.countDocuments(query);
@@ -126,6 +146,7 @@ async function run() {
         res.send(finalResult);
       }
     });
+
 
     // ===================>>>>>>>>> [dynamic producet collection api ,, connect with ( useAllDressCollection.jsx Hook ) ]
     // app.get("/allDressCollection", async (req, res) => {
