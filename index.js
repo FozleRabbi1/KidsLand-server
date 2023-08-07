@@ -7,18 +7,11 @@ const cors = require('cors')
 app.use(cors());
 app.use(express.json());
 
-const datas = require("./Data/spatiolData.json")
-
-// fozlerabbishuvo
-// bhSiq2ymprfYfAbs
-// KidsLand
-// 2kMDcm0RtuViiUH1
 
 
 
 const uri = "mongodb+srv://KidsLand:2kMDcm0RtuViiUH1@kidsland.c47qxlr.mongodb.net/?retryWrites=true&w=majority";
 
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
@@ -122,6 +115,8 @@ async function run() {
     //   res.send(finalResult);
     // });
 
+
+    // ===================>>>>>>>>> [dynamic producet collection api ,, connect with ( useAllDressCollection.jsx Hook ) ]
     app.get("/allDressCollection", async (req, res) => {
       const itemOffset = parseInt(req.query.itemOffset) || 0;
       const endOffset = parseInt(req.query.endOffset) || 12;
@@ -217,6 +212,13 @@ async function run() {
     //   }
     // });
 
+    //==================>>>>>>>>> [ get single data connect by SpacialCategoriesSingle.jsx  ] 
+    app.get("/SpacialCategoriesSingle/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) }
+      const result = await kidsSpecialCollection.findOne(query)
+      res.send(result)
+    })
 
 
 
