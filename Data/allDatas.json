@@ -14,7 +14,8 @@
         "upload_date": "2023-07-08",
         "brand": "GlamourGirls",
         "color": "White",
-        "material": "Silk"
+        "material": "Silk",
+        "special" : "special"
       },
       {
         "title": "Boy's Casual Shirt",
@@ -31,7 +32,8 @@
         "upload_date": "2023-07-15",
         "brand": "CoolKids",
         "color": "Blue",
-        "material": "Cotton"
+        "material": "Cotton",
+        "special" : "special"
       },
       {
         "title": "Boy's Floral Dress",
@@ -81,7 +83,8 @@
         "upload_date": "2023-07-12",
         "brand": "FashionKids",
         "color": "Yellow",
-        "material": "Cotton"
+        "material": "Cotton",
+        "special" : "special"
       },
       {
         "title": "Boy's Denim Shorts",
@@ -98,7 +101,8 @@
         "upload_date": "2023-07-08",
         "brand": "UrbanDenim",
         "color": "Blue",
-        "material": "Denim"
+        "material": "Denim",
+        "special" : "special"
       },
       {
         "title": "Girl's Party Gown",
@@ -132,7 +136,8 @@
         "upload_date": "2023-07-10",
         "brand": "ActiveKids",
         "color": "Green",
-        "material": "Polyester"
+        "material": "Polyester",
+        "special" : "special"
       },
       {
         "title": "Girl's Floral Skirt",
@@ -149,7 +154,8 @@
         "upload_date": "2023-07-05",
         "brand": "FlowerPower",
         "color": "Purple",
-        "material": "Chiffon"
+        "material": "Chiffon",
+        "special" : "special"
       },
       {
         "title": "Boy's Striped Polo",
@@ -218,7 +224,8 @@
         "upload_date": "2023-07-09",
         "brand": "XYZ Fashion",
         "color": "Blue",
-        "material": "Polyester"
+        "material": "Polyester",
+        "special" : "special"
       },
       {
         "title": "Denim Shorts",
@@ -252,7 +259,8 @@
         "upload_date": "2023-07-07",
         "brand": "Enchanting Kids",
         "color": "Pink",
-        "material": "Polyester"
+        "material": "Polyester",
+        "special" : "special"
       },
       {
         "title": "Rainbow Leggings",
@@ -303,7 +311,8 @@
         "upload_date": "2023-07-08",
         "brand": "GlamourGirls",
         "color": "White",
-        "material": "Silk"
+        "material": "Silk",
+        "special" : "special"
       },
       {
         "title": "Boy's Casual Shirt",
@@ -370,7 +379,8 @@
         "upload_date": "2023-07-12",
         "brand": "FashionKids",
         "color": "Yellow",
-        "material": "Cotton"
+        "material": "Cotton",
+        "special" : "special"
       },
       {
         "title": "Boy's Denim Shorts",
@@ -421,7 +431,8 @@
         "upload_date": "2023-07-10",
         "brand": "ActiveKids",
         "color": "Green",
-        "material": "Polyester"
+        "material": "Polyester",
+        "special" : "special"
       },
       {
         "title": "Girl's Floral Skirt",
@@ -455,7 +466,8 @@
         "upload_date": "2023-07-12",
         "brand": "ClassicBoys",
         "color": "Red",
-        "material": "Cotton"
+        "material": "Cotton",
+        "special" : "special"
       },
       {
         "title": "Elegant Party Dress",
@@ -472,7 +484,8 @@
         "upload_date": "2023-07-04",
         "brand": "Fancy Kids",
         "color": "Pink",
-        "material": "Silk"
+        "material": "Silk",
+        "special" : "special"
       },
       {
         "title": "Cartoon Print Pajamas",
@@ -506,7 +519,8 @@
         "upload_date": "2023-07-01",
         "brand": "Dino Kids",
         "color": "Green",
-        "material": "Cotton"
+        "material": "Cotton",
+        "special" : "special"
       },
       {
         "title": "Floral Romper",
@@ -540,7 +554,8 @@
         "upload_date": "2023-06-29",
         "brand": "Active Kids",
         "color": "Black",
-        "material": "Synthetic"
+        "material": "Synthetic",
+        "special" : "special"
       },
       {
         "title": "Unicorn Print Backpack",
@@ -591,7 +606,8 @@
         "upload_date": "2023-06-26",
         "brand": "Twinkle Toes",
         "color": "Pink",
-        "material": "Tulle"
+        "material": "Tulle",
+        "special" : "special"
       },
       {
         "title": "Hooded Jacket",
@@ -642,7 +658,8 @@
         "upload_date": "2023-06-23",
         "brand": "Classy Kids",
         "color": "Blue",
-        "material": "Cotton"
+        "material": "Cotton",
+        "special" : "special"
       },
       {
         "title": "Printed Leggings",
@@ -659,7 +676,8 @@
         "upload_date": "2023-06-22",
         "brand": "Fashionable Kids",
         "color": "Multicolor",
-        "material": "Spandex"
+        "material": "Spandex",
+        "special" : "special"
       },
       {
         "title": "Party Dress",
@@ -710,7 +728,8 @@
         "upload_date": "2023-06-19",
         "brand": "Rainbow Kids",
         "color": "Multicolor",
-        "material": "Cotton"
+        "material": "Cotton",
+        "special" : "special"
       },
       {
         "title": "Printed Skater Dress",
@@ -761,7 +780,8 @@
         "upload_date": "2023-06-18",
         "brand": "Trendy Kids",
         "color": "White",
-        "material": "Cotton"
+        "material": "Cotton",
+        "special" : "special"
       },
       {
         "title": "Denim Overalls",
@@ -778,7 +798,8 @@
         "upload_date": "2023-06-17",
         "brand": "Denim Kids",
         "color": "Blue",
-        "material": "Denim"
+        "material": "Denim",
+        "special" : "special"
       },
       {
         "title": "Printed Skirt",
@@ -812,7 +833,8 @@
         "upload_date": "2023-06-15",
         "brand": "Preppy Kids",
         "color": "Blue",
-        "material": "Cotton"
+        "material": "Cotton",
+        "special" : "special"
       },
       {
         "title": "Floral Sundress",
@@ -829,7 +851,8 @@
         "upload_date": "2023-06-14",
         "brand": "Sunshine Kids",
         "color": "Yellow",
-        "material": "Cotton"
+        "material": "Cotton",
+        "special" : "special"
       },
       {
         "title": "Printed Shorts",
@@ -846,7 +869,8 @@
         "upload_date": "2023-06-13",
         "brand": "Cool Kids",
         "color": "Multicolor",
-        "material": "Polyester"
+        "material": "Polyester",
+        "special" : "special"
       },
       {
         "title": "Printed Raincoat",
@@ -880,7 +904,8 @@
         "upload_date": "2023-06-11",
         "brand": "Adventure Kids",
         "color": "Blue",
-        "material": "Nylon"
+        "material": "Nylon",
+        "special" : "special"
       },
       {
         "title": "Floral Romper",
@@ -914,7 +939,8 @@
         "upload_date": "2023-06-29",
         "brand": "Active Kids",
         "color": "Black",
-        "material": "Synthetic"
+        "material": "Synthetic",
+        "special" : "special"
       },
       {
         "title": "Unicorn Print Backpack",
@@ -948,7 +974,8 @@
         "upload_date": "2023-06-27",
         "brand": "Trendy Kids",
         "color": "Red",
-        "material": "Cotton"
+        "material": "Cotton",
+        "special" : "special"
       },
       {
         "title": "Tutu Skirt",
@@ -982,7 +1009,8 @@
         "upload_date": "2023-06-25",
         "brand": "Cozy Kids",
         "color": "Blue",
-        "material": "Polyester"
+        "material": "Polyester",
+        "special" : "special"
       },
       {
         "title": "Floral Headband",

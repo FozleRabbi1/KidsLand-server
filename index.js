@@ -28,6 +28,7 @@ async function run() {
     const FavouriteCollection = client.db("kedsCollection").collection("FavouriteCollection");
     const usersDataCollection = client.db("kedsCollection").collection("userCollection");
     const allDressCollection = client.db("kedsCollection").collection("allDressCollection");
+    const allDressCollectionTwo = client.db("kedsCollection").collection("allDressCollectionTwo");
 
 
     //===================[connect by register]==================>>>>>> users data collection Api from register
@@ -46,23 +47,45 @@ async function run() {
 
 
     //===================[Connect by SpatioanCatagories section ]===================>>>>>>>>>> this dynamic API for spacial collention section
+    // app.get("/specialDats/:gender", async (req, res) => {
+    //   const gender = req.params.gender;
+    //   if (gender === "all") {
+    //     const result = await kidsSpecialCollection.find().toArray();
+    //     res.send(result)
+    //     return
+    //   }
+    //   else {
+    //     const query = { gender: gender.toLocaleLowerCase() }
+    //     const result = await kidsSpecialCollection.find(query).toArray();
+    //     res.send(result)
+    //   }
+    // })
     app.get("/specialDats/:gender", async (req, res) => {
       const gender = req.params.gender;
       if (gender === "all") {
-        const result = await kidsSpecialCollection.find().toArray();
-        res.send(result)
-        return
+        const result = await allDressCollectionTwo.find({ special: "special" }).toArray();
+        res.send(result);
+        return;
+      } else {
+        const query = { gender: gender.toLowerCase(), special: "special" };
+        const result = await allDressCollectionTwo.find(query).toArray();
+        res.send(result);
       }
-      else {
-        const query = { gender: gender.toLocaleLowerCase() }
-        const result = await kidsSpecialCollection.find(query).toArray();
-        res.send(result)
-      }
-    })
+    });
+
+
 
     // ===============[Connect by SpatioanCatagories section]==============>>>>> this API ADD favourite data coluction
     app.post("/favouriteProducts", async (req, res) => {
       const favouriteData = req.body;
+      const imgUrl = favouriteData.imageUrl;
+      const query = {imageUrl : imgUrl}
+      // const exist = await FavouriteCollection.findOne(query);      
+      const exist = await FavouriteCollection.findOne(query) !== null;
+      if(exist){
+        res.send({message : "Product already exists in favourites", exist : true})
+        return
+      }
       const result = await FavouriteCollection.insertOne(favouriteData)
       res.send(result)
     });
@@ -87,7 +110,8 @@ async function run() {
 
     // ===================>>>>>>>>> [all producet number api ,, connect with ( AllDressCollection.jsx ) ]
     app.get("/allProductNumber", async (req, res) => {
-      const totalItems = await allDressCollection.estimatedDocumentCount()
+      // const totalItems = await allDressCollection.estimatedDocumentCount()
+      const totalItems = await allDressCollectionTwo.estimatedDocumentCount()
       res.send(totalItems.toString())
     })
 
@@ -128,15 +152,15 @@ async function run() {
 
       if (gender === "All") {
         const query = { price: { $gte: lowRangeValue, $lte: highRangeValue } };
-        const productLength = await allDressCollection.countDocuments(query);
-        const result = await allDressCollection.find(query).sort({ price: ascenDescenOrder }).skip(itemOffset).limit(endOffset - itemOffset).toArray();
+        const productLength = await allDressCollectionTwo.countDocuments(query);
+        const result = await allDressCollectionTwo.find(query).sort({ price: ascenDescenOrder }).skip(itemOffset).limit(endOffset - itemOffset).toArray();
         const finalResult = { productLength, result };
         res.send(finalResult);
         return
       } else {
         const query = { gender: gender.toLowerCase(), price: { $gte: lowRangeValue, $lte: highRangeValue } };
-        const productLength = await allDressCollection.countDocuments(query);
-        const result = await allDressCollection.find(query).sort({ price: ascenDescenOrder }).skip(itemOffset).limit(endOffset - itemOffset).toArray();
+        const productLength = await allDressCollectionTwo.countDocuments(query);
+        const result = await allDressCollectionTwo.find(query).sort({ price: ascenDescenOrder }).skip(itemOffset).limit(endOffset - itemOffset).toArray();
         const finalResult = { productLength, result };
         res.send(finalResult);
       }
@@ -216,7 +240,8 @@ async function run() {
     app.get("/SpacialCategoriesSingle/:id", async (req, res) => {
       const id = req.params.id;
       const query = { _id: new ObjectId(id) }
-      const result = await kidsSpecialCollection.findOne(query)
+      // const result = await kidsSpecialCollection.findOne(query)
+      const result = await allDressCollectionTwo.findOne(query)
       res.send(result)
     })
 
