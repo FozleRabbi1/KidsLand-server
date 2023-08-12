@@ -3,13 +3,31 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 5000;
 const cors = require('cors')
+var jwt = require('jsonwebtoken');
+require('dotenv').config()
 
 app.use(cors());
 app.use(express.json());
 
 
-const uri = "mongodb+srv://KidsLand:2kMDcm0RtuViiUH1@kidsland.c47qxlr.mongodb.net/?retryWrites=true&w=majority";
+const verifyJWT = (req, res, next) => {
+  const authorization = req.headers.authorization;
+  if (!authorization) {
+    return res.status(401).send({ error: true, message: "unauthorize access" })
+  }
+  const token = authorization.split(" ")[1];
+  jwt.verify(token, process.env.SECRET_JWT_TOKEN, (err, decoded) => {
+    if (err) {
+      return res.status(401).send({ error: true, message: "unauthorize access" })
+    }
+    req.decoded = decoded;
+    next();
+  })
+}
 
+
+
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@kidsland.c47qxlr.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
@@ -27,6 +45,14 @@ async function run() {
     const usersDataCollection = client.db("kedsCollection").collection("userCollection");
     const allDressCollection = client.db("kedsCollection").collection("allDressCollection");
     const allDressCollectionTwo = client.db("kedsCollection").collection("allDressCollectionTwo");
+
+    //======>>> Jwt [connect with useAxioueHook]
+    app.post("/jwt", async (req, res) => {
+      const user = req.body;
+      const token = jwt.sign(user, process.env.SECRET_JWT_TOKEN, { expiresIn: "1h" })
+      res.send({ token })
+    })
+
 
 
     //===================[connect by register]==================>>>>>> users data collection Api from register
@@ -60,10 +86,11 @@ async function run() {
     });
 
     // ===============[Connect by SpatioanCatagories section]==============>>>>> this API ADD favourite data coluction
-    app.post("/favouriteProducts", async (req, res) => {
+    app.post("/favouriteProducts", verifyJWT, async (req, res) => {
+      const email = req?.query?.email;
       const favouriteData = req.body;
       const imgUrl = favouriteData.imageUrl;
-      const query = { imageUrl: imgUrl }
+      const query = { imageUrl: imgUrl, email: email }
       // const exist = await FavouriteCollection.findOne(query);      
       const exist = await FavouriteCollection.findOne(query) !== null;
       if (exist) {
@@ -76,7 +103,7 @@ async function run() {
 
 
     // =================[connect bt nav bar]=============>>>>>>>>>>>>>>>>>>>> this API GET favourite data coluction
-    app.get("/favouriteProducts", async (req, res) => {
+    app.get("/favouriteProducts", verifyJWT, async (req, res) => {
       const email = req?.query?.email;
       const query = { email: email };
       const result = await FavouriteCollection.find(query).toArray();
@@ -131,7 +158,7 @@ async function run() {
       }
     });
 
-   
+
     //==================>>>>>>>>> [ get single data connect by SpacialCategoriesSingle.jsx  ] 
     app.get("/SpacialCategoriesSingle/:id", async (req, res) => {
       const id = req.params.id;
