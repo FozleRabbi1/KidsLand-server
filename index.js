@@ -10,6 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 
+// =========>>> varifyJWT function before get or set data and other functionality
 const verifyJWT = (req, res, next) => {
   const authorization = req.headers.authorization;
   if (!authorization) {
@@ -40,19 +41,29 @@ async function run() {
   try {
     // await client.connect();
 
+    const allDressCollectionTwo = client.db("kedsCollection").collection("allDressCollectionTwo");
     const kidsSpecialCollection = client.db("kedsCollection").collection("spacialCollection");
     const FavouriteCollection = client.db("kedsCollection").collection("FavouriteCollection");
     const usersDataCollection = client.db("kedsCollection").collection("userCollection");
-    const allDressCollection = client.db("kedsCollection").collection("allDressCollection");
-    const allDressCollectionTwo = client.db("kedsCollection").collection("allDressCollectionTwo");
+    const addToCardCollection = client.db("kedsCollection").collection("addToCardCollection");
 
-    //======>>> Jwt [connect with useAxioueHook]
+    //======>>> Jwt [connect with AuthContextProvider == useEffect Hook if condition]
     app.post("/jwt", async (req, res) => {
       const user = req.body;
       const token = jwt.sign(user, process.env.SECRET_JWT_TOKEN, { expiresIn: "1h" })
       res.send({ token })
     })
 
+    app.post("/addToCard", async (req, res) => {
+      const data = req.body;
+      const result = await addToCardCollection.insertOne(data)
+      res.send(result)
+    })
+
+    app.get("/addToCard", async (req, res) => {
+      const result = await addToCardCollection.find().toArray();
+      res.send(result)
+    })
 
 
     //===================[connect by register]==================>>>>>> users data collection Api from register
