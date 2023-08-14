@@ -56,12 +56,22 @@ async function run() {
 
     app.post("/addToCard", async (req, res) => {
       const data = req.body;
+      const imageUrl = data.imageUrl
+      const email = data.email
+      const query = { imageUrl: imageUrl, email: email }
+      const exist = await addToCardCollection.findOne(query) !== null;
+      if (exist) {
+        res.send({ message: "Product already exists in favourites", exist: true })
+        return
+      }
       const result = await addToCardCollection.insertOne(data)
       res.send(result)
     })
 
     app.get("/addToCard", async (req, res) => {
-      const result = await addToCardCollection.find().toArray();
+      const email = req.query.email;
+      const query = { email: email }
+      const result = await addToCardCollection.find(query).toArray();
       res.send(result)
     })
 
