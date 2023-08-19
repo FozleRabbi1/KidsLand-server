@@ -54,27 +54,6 @@ async function run() {
       res.send({ token })
     })
 
-    app.post("/addToCard", async (req, res) => {
-      const data = req.body;
-      const imageUrl = data.imageUrl
-      const email = data.email
-      const query = { imageUrl: imageUrl, email: email }
-      const exist = await addToCardCollection.findOne(query) !== null;
-      if (exist) {
-        res.send({ message: "Product already exists in favourites", exist: true })
-        return
-      }
-      const result = await addToCardCollection.insertOne(data)
-      res.send(result)
-    })
-
-    app.get("/addToCard", async (req, res) => {
-      const email = req.query.email;
-      const query = { email: email }
-      const result = await addToCardCollection.find(query).toArray();
-      res.send(result)
-    })
-
 
     //===================[connect by register]==================>>>>>> users data collection Api from register
     app.post("/users", async (req, res) => {
@@ -189,6 +168,58 @@ async function run() {
       res.send(result)
     })
 
+    // ============>> All addToCard buttons connected this api
+    app.post("/addToCard", async (req, res) => {
+      const data = req.body;
+      const imageUrl = data.imageUrl
+      const email = data.email
+      const query = { imageUrl: imageUrl, email: email }
+      const exist = await addToCardCollection.findOne(query) !== null;
+      if (exist) {
+        res.send({ message: "Product already exists ", exist: true })
+        return
+      }
+      const result = await addToCardCollection.insertOne(data)
+      res.send(result)
+    })
+
+    // ===============>> [connected with useAddtoCardGetData.jsx (Hook)]
+    app.get("/addToCard", async (req, res) => {
+      const email = req.query.email;
+      const query = { email: email }
+      const result = await addToCardCollection.find(query).toArray();
+      res.send(result)
+    })
+
+    app.delete("/addToCard/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) }
+      const result = await addToCardCollection.deleteOne(query);
+      res.send(result)
+    })
+
+
+    // ===========================>>>>>>>>>>>>DASHBOARD API 
+    // ===============>>> AllUsers Get API 
+    app.get("/allUsers", async (req, res) => {
+      const query = {}
+      const result = await usersDataCollection.find().toArray();
+      res.send(result)
+    })
+
+    app.patch("/roleChangeApi", async (req, res) => {
+      const email = req.query.email
+      const role = req.query.role
+
+      const query = { email: email }
+      const updatedDoc = {
+        $set: {
+          role: role
+        }
+      }
+      const result = await usersDataCollection.updateOne(query, updatedDoc);
+      res.send(result)
+    })
 
 
 
