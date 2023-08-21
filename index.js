@@ -199,25 +199,52 @@ async function run() {
     })
 
 
-    // ===========================>>>>>>>>>>>>DASHBOARD API 
+    // ==========================================>>>>>>>>>>>> DASHBOARD ALL API 
+
+    // ================================>>> Admin Panale API's
     // ===============>>> AllUsers Get API 
     app.get("/allUsers", async (req, res) => {
-      const query = {}
       const result = await usersDataCollection.find().toArray();
       res.send(result)
     })
 
+    // =============>>>> [ connect with dashboadrd in admin panale user's Route]
     app.patch("/roleChangeApi", async (req, res) => {
-      const email = req.query.email
+      const id = req.query.id
       const role = req.query.role
-
-      const query = { email: email }
+      const query = { _id: new ObjectId(id) }
       const updatedDoc = {
         $set: {
           role: role
         }
       }
       const result = await usersDataCollection.updateOne(query, updatedDoc);
+      res.send(result)
+    })
+ 
+    // ===========================================>>>> connect with useAdmin hook [ this API send true or false ]
+    app.get("/users/admin/:email", async (req, res) => {
+      const email = req.params.email;
+      const query = { email: email };
+      const user = await usersDataCollection.findOne(query)
+      const result = { admin: user.role === "admin" }   // ===========>>> send true or false
+      res.send(result);
+    })
+
+    // =========================================>>>> connect with useManager hook  [ this API send true or false ]
+    app.get("/users/manager/:email", async (req, res) => {
+      const email = req.params.email;
+      const query = { email: email };
+      const user = await usersDataCollection.findOne(query)
+      const result = { manager: user.role === "manager" }   // ============>>> send true or false
+      res.send(result);
+    })
+
+    // delete user API connect with admin panel in user route 
+    app.delete("/users/:id", async(req, res)=>{
+      const id = req.params.id;
+      const query = {_id : new ObjectId(id)}
+      const result = await usersDataCollection.deleteOne(query);
       res.send(result)
     })
 
