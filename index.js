@@ -54,6 +54,16 @@ async function run() {
       res.send({ token })
     })
 
+    const verifyAdmin = async (req, res, next) => {
+      const email = req.decoded.email;
+      const query = { email: email };
+      const user = await usersDataCollection.findOne(query);
+      if (user.role !== "admin") {
+        return res.status(403).send({ message: "Forbidded Access", error: true })
+      }
+      next();
+    }
+
 
     //===================[connect by register]==================>>>>>> users data collection Api from register
     app.post("/users", async (req, res) => {
@@ -203,7 +213,7 @@ async function run() {
 
     // ================================>>> Admin Panale API's
     // ===============>>> AllUsers Get API 
-    app.get("/allUsers", async (req, res) => {
+    app.get("/allUsers", verifyJWT, verifyAdmin, async (req, res) => {
       const result = await usersDataCollection.find().toArray();
       res.send(result)
     })
@@ -221,7 +231,7 @@ async function run() {
       const result = await usersDataCollection.updateOne(query, updatedDoc);
       res.send(result)
     })
- 
+
     // ===========================================>>>> connect with useAdmin hook [ this API send true or false ]
     app.get("/users/admin/:email", async (req, res) => {
       const email = req.params.email;
@@ -241,12 +251,20 @@ async function run() {
     })
 
     // delete user API connect with admin panel in user route 
-    app.delete("/users/:id", async(req, res)=>{
+    app.delete("/users/:id", async (req, res) => {
       const id = req.params.id;
-      const query = {_id : new ObjectId(id)}
+      const query = { _id: new ObjectId(id) }
       const result = await usersDataCollection.deleteOne(query);
       res.send(result)
     })
+
+
+    // ===================>>>>>>>>> [all producet number api ,, connect with ( AllDressCollection.jsx ) ]
+    app.get("/topTenProducts", async (req, res) => {
+      const totalItems = await allDressCollectionTwo.find().skip(40).limit(10).toArray();
+      res.send(totalItems);
+    });
+
 
 
 
